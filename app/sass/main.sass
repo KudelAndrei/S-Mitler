@@ -50,20 +50,47 @@ body
 	background-color: $dark
 	@extend .bgi
 	
+	/* TOP */
 	.header-top	
 		padding-top: 40px
 		position: absolute
 		left: 0
 		width: 100%
+		.logo
+			img 
+				margin-left: 30px
+		.phone
+			position: absolute
+			right: 90px
 	
-	.logo
-		img 
-			margin-left: 100px
-
-	.phone
+	/* BOTTOM */
+	.header-bottom
 		position: absolute
-		right: 90px
-	
+		bottom: 0
+		left: 0
+		width: 100%
+		border-top: 1px solid rgba(#fff, .1)
+		background-color: rgba(#000, .1)
+		padding: 10px 0
+		color: #fff
+		font-size: 14px
+		font-weight: 300
+		text-align: center
+		.phone
+			font-size: 14px
+		i 
+			font-size: 14px
+			color: rgba(#fff, .3)
+			margin-right: 5px
+
+	/* CENTER */
+	.header-center
+		max-width: 50%
+		text-align: center
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
 
 
 /* логотип */
@@ -75,7 +102,7 @@ body
 
 /* телефон */
 .phone
-	color: #fff
+	color: rgba(#fff, .9)
 	font-size: 20px
 	line-height: 28px
 	i 
@@ -84,8 +111,9 @@ body
 
 	&:hover, &:focus
 		color: #fff
-	&:focus
+		color: rgba(#fff, 1)
 		text-decoration: none
+		
 
 /* меню */
 .hamburger
