@@ -1,12 +1,11 @@
 $(document).ready(function() {
 
-	$("#my-menu").mmenu({
-			// options
-	}, {
-			// configuration
-			offCanvas: {
-				pageNodetype: "section"
-			}
+	/* меню */
+	$("#my-menu").mmenu({});
+
+	/* слайдер */
+	$('.owl-services').owlCarousel({
+		items: 1,
 	});
 	
 });

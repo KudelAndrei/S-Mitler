@@ -177,6 +177,35 @@ ul, li
 		.soc-seti
 			margin: auto
 
+/* меню */
+#my-menu	
+	background-color: #111
+	color: #fff
+	.mm-panel
+		padding-top: 80px 
+	li 
+		.my-menu__item
+			padding: 8px 10px 8px 60px
+			color: rgba(#fff, .7)
+			transition: color 0.2s ease
+			.fa 
+				margin-right: 7px
+				color: #fff
+				transition: color 0.2s ease
+			&:hover
+				color: $accent
+				.fa
+					color: $accent
+#mm-blocker
+	background-color: rgba(#000, .2)
+	display: none
+	width: 100%
+	height: 100%
+	position: fixed
+	transition: opacity .4s ease .4s
+	top: 0
+	left: 0
+	z-index: 20
 
 /* социальные сети */		
 .soc-seti
@@ -218,7 +247,6 @@ ul, li
 		color: rgba(#fff, 1)
 		text-decoration: none
 		
-
 /* меню */
 .hamburger
 	position: absolute
@@ -234,6 +262,74 @@ ul, li
 				height: 2px
 				width: 36px
 				background-color: #fff
+
+
+
+/* сервисы */
+.services
+	position: relative
+	color: #fff
+
+
+
+
+/* футер */
+.footer
+	position: relative
+	background-color: #242424
+	color: #fff
+	padding: 40px 0
+
+	.soc-seti
+		.soc-seti__item
+			display: inline-block
+			margin-right: 5px
+			.fa
+				color: rgba(#fff, .6)
+	.menu
+		.menu__item
+			a
+				color: rgba(#fff, .5)
+				text-decoration: underline
+				font-size: 14px
+				margin-bottom: 4px
+				display: inline-block
+				transition: color 0.2s ease
+				.fa 
+					color: #fff
+					margin-right: 7px
+					transition: color 0.2s ease
+				&:hover
+					text-decoration: none
+					color: $accent
+					.fa 
+						color: $accent
+	.info
+		li 
+			font-size: 14px
+			color: rgba(#fff, .9)
+			margin-bottom: 12px
+			.fa 
+				margin-right: 10px
+				color: rgba(#fff, .5)
+			.phone
+				color: #fff
+				font-size: 22px
+				margin-top: 15px
+				display: inline-block
+				white-space: nowrap
+	
+
+#map
+	width: 100%
+	height: 200px
+
+.logo__desc, .logo__info
+	color: #777
+	line-height: 1.5
+	font-size: 14px
+	margin-bottom: 15px
+	display: block
 
 
 @import "media" // Всегда в конце
