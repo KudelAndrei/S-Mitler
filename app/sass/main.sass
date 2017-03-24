@@ -63,8 +63,12 @@ ul, li
 	transition: background-color 0.2s ease
 	&:hover
 		background-color: lighten($accent, 5%)
+		color: #fff
+		text-decoration: none
 	&:focus
 		background-color: darken($accent, 5%)
+		color: #fff
+		text-decoration: none
 
 /* шапка */
 .header
@@ -80,6 +84,7 @@ ul, li
 		position: absolute
 		left: 0
 		width: 100%
+		z-index: 1
 		.logo
 			img 
 				margin-left: 30px
@@ -182,7 +187,7 @@ ul, li
 	background-color: #111
 	color: #fff
 	.mm-panel
-		padding-top: 80px 
+		padding-top: 90px 
 	li 
 		.my-menu__item
 			padding: 8px 10px 8px 60px
@@ -196,16 +201,9 @@ ul, li
 				color: $accent
 				.fa
 					color: $accent
-#mm-blocker
-	background-color: rgba(#000, .2)
-	display: none
-	width: 100%
-	height: 100%
-	position: fixed
-	transition: opacity .4s ease .4s
-	top: 0
-	left: 0
-	z-index: 20
+.mm-navbar a img
+	width: 128px
+	padding-top: 25px
 
 /* социальные сети */		
 .soc-seti
@@ -251,7 +249,7 @@ ul, li
 .hamburger
 	position: absolute
 	right: -6px
-	z-index: 1
+	z-index: 2
 	top: 20px
 	span
 		height: 2px
@@ -269,7 +267,60 @@ ul, li
 .services
 	position: relative
 	color: #fff
-
+	.owl-services__img
+		max-height: 50%
+		overflow: hidden
+		opacity: .7
+		transition: opacity 0.4s ease-in-out
+	.owl-services__content
+		height: 50%
+		padding: 40px
+		text-align: center
+		z-index: 1
+	.owl-services__item
+		height: 100vh
+		min-height: 700px
+		&--blue
+			background-color: $blue
+		&--red
+			background-color: $red
+		&--accent
+			background-color: $accent
+		&:hover
+			.owl-services__img
+				opacity: 1
+	.owl-services__logo
+		width: 100px
+		display: inline-block
+	.owl-services__head
+		margin: 0
+		text-transform: uppercase
+		font-size: 26px
+		font-family: "RalewayBold", snas-serif
+	.owl-services__service
+		margin: 0
+		margin-bottom: 20px
+		line-height: 1.4
+		font-size: 14px
+		text-transform: uppercase
+	.owl-services__list
+		margin-bottom: 25px
+		li 
+			font-size: 18px
+			line-height: 3
+			border-bottom: 1px solid rgba(#000, .1)
+			strong 
+				color: $dark
+			&:last-child
+				border-bottom: none
+	.button
+		background-color: #fff
+		color: $dark
+		padding: 15px 35px
+		letter-spacing: 3px
+		font-family: "RalewayLight", sans-serif
+		&:hover
+			background-color: darken(#fff, 2%)
 
 
 
