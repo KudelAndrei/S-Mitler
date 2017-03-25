@@ -30,6 +30,28 @@ $(document).ready(function() {
 	/* слайдер */
 	$('.owl-services').owlCarousel({
 		items: 3,
+		responsive : {
+			0 : {
+				items: 1,
+			},
+			800: {
+				items: 2,
+			},
+			1250: {
+				items: 3,
+			},
+			1920: {
+				items: 4
+			}
+		}
 	});
+	var owl = $('.owl-services');
+	owl.owlCarousel();
+	$('.services__next').click(function() {
+			owl.trigger('next.owl.carousel');
+	})
+	$('.services__prev').click(function() {
+			owl.trigger('prev.owl.carousel');
+	})
 	
 });

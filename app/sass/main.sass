@@ -4,19 +4,19 @@
 @import "vars"
 
 *::-webkit-input-placeholder
-	color: #666
+	color: #fff
 	opacity: 1
 
 *:-moz-placeholder
-	color: #666
+	color: #fff
 	opacity: 1
 
 *::-moz-placeholder
-	color: #666
+	color: #fff
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
+	color: #fff
 	opacity: 1
 
 body input:focus:required:invalid,
@@ -46,6 +46,7 @@ ul, li
 .bgi
 	background-position: center top
 	background-size: cover
+	background-repeat: no-repeat
 
 
 .button
@@ -275,7 +276,7 @@ ul, li
 	.owl-services__content
 		height: 50vh
 		min-height: 430px
-		padding: 40px
+		padding: 40px 30px
 		text-align: center
 		z-index: 1
 	.owl-services__item
@@ -310,6 +311,7 @@ ul, li
 			font-size: 18px
 			line-height: 3
 			border-bottom: 1px solid rgba(#000, .1)
+			white-space: nowrap
 			strong 
 				color: $dark
 			&:last-child
@@ -323,6 +325,102 @@ ul, li
 		&:hover
 			background-color: darken(#fff, 2%)
 
+	/* навигация */
+	.services-nav
+		z-index: 2
+
+		.services__next, .services__prev
+			position: absolute
+			top: 0
+			display: block
+			width: 60px
+			height: 60px
+			line-height: 60px
+			font-size: 22px
+			background-color: #fff
+			color: $dark
+			text-align: center
+			z-index: 2
+			cursor: pointer
+
+		.services__next
+			right: 0
+		.services__prev
+			left: 0
+
+
+/* салон */
+.salon
+	@extend .bgi
+	position: relative
+	color: #fff
+	padding: 5% 0
+	&::before
+		position: absolute
+		content: ""
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: rgba(#3d3c3c, .9)
+		z-index: 0
+	.salon__head
+		font-size: 28px
+		font-family: "RalewayBold", sans-serif
+		text-transform: uppercase
+	.salon__desc
+		line-height: 1.6
+
+
+/* форма обратной связи */
+.callback
+	@extend .bgi
+	position: relative
+	color: #fff
+	background-size: contain
+	background-position: 25%
+	background-color: #fff
+	&::before
+		position: absolute
+		content: ""
+		width: 50%
+		height: 100%
+		left: 50%
+		top: 0
+		background-color: rgba($accent, .9)
+
+	.callback-form
+		padding: 20% 0
+		.callback-form__logo
+			width: 120px
+			img
+				max-width: 100%
+		.callback-form__head
+			margin: 0
+			font-size: 30px
+			font-family: "RalewayBold", sans-serif
+			text-transform: uppercase
+			line-height: 1.5
+		.callback-form__desc
+			margin: 0
+			margin-bottom: 30px
+		.callback-form__input
+			width: 100%
+			display: block
+			background-color: transparent
+			border: 1px solid 
+			border: 1px solid rgba(0,0,0,.1)
+			border-bottom: rgba(0,0,0,.1) 2px solid
+			padding: 10px 10px 10px 20px
+			margin-bottom: 20px
+			font-weight: 300
+		.button
+			background-color: #fff
+			color: #333
+			margin-top: 30px
+			padding: 14px 40px
+			&:hover
+				background-color: darken(#fff, 2%)
 
 
 /* футер */
