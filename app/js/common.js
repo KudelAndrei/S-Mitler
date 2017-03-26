@@ -27,7 +27,7 @@ $(document).ready(function() {
 	});
 
 
-	/* слайдер */
+	/* слайдер сервиса*/
 	$('.owl-services').owlCarousel({
 		items: 3,
 		responsive : {
@@ -53,5 +53,10 @@ $(document).ready(function() {
 	$('.services__prev').click(function() {
 			owl.trigger('prev.owl.carousel');
 	})
+
+	$('.owl-reviews').owlCarousel({
+		items: 1,
+		dots: true,
+	});
 	
 });
