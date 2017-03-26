@@ -47,7 +47,10 @@ ul, li
 	background-position: center top
 	background-size: cover
 	background-repeat: no-repeat
+	position: relative
 
+
+/* затемнение  */
 @mixin before($color)
 	position: absolute
 	content: ""
@@ -58,6 +61,8 @@ ul, li
 	z-index: 0
 	background-color: $color
 
+
+/* кнопка */
 .button
 	border: none
 	color: #fff
@@ -80,9 +85,25 @@ ul, li
 		color: #fff
 		text-decoration: none
 
+
+/* навигация для слайдеров */
+.owl-dots
+	padding-top: 50px
+	.owl-dot
+		display: inline-block
+		width: 12px
+		height: 12px
+		background-color: #fff
+		border-radius: 50%
+		margin-right: 7px
+		transform: scale(0.8)
+		transition: transform, background-color, 0.2s ease
+		&.active
+			background-color: $accent 
+			transform: scale(1)
+
 /* шапка */
 .header
-	position: relative
 	min-height: 620px
 	height: 100vh
 	background-color: $dark
@@ -211,6 +232,10 @@ ul, li
 				color: $accent
 				.fa
 					color: $accent
+	.mm-selected
+		a 
+			background-color: darken($accent, 10%)
+
 .mm-navbar a img
 	width: 128px
 	padding-top: 25px
@@ -361,7 +386,6 @@ ul, li
 /* салон */
 .salon
 	@extend .bgi
-	position: relative
 	color: #fff
 	padding: 5% 0
 	&::before
@@ -377,7 +401,6 @@ ul, li
 /* форма обратной связи */
 .callback
 	@extend .bgi
-	position: relative
 	color: #fff
 	background-size: contain
 	background-position: 25%
@@ -431,7 +454,6 @@ ul, li
 /* отзывы */
 .reviews
 	@extend .bgi
-	position: relative
 	padding: 5% 0
 	color: #fff
 	text-align: center
@@ -483,25 +505,60 @@ ul, li
 			right: 10px
 			top: -20px
 
-	.owl-dots
-		margin-top: 50px
-		.owl-dot
-			display: inline-block
-			width: 12px
-			height: 12px
-			background-color: #fff
-			border-radius: 50%
-			margin-right: 7px
-			transform: scale(0.8)
-			transition: transform, background-color, 0.2s ease
-			&.active
-				background-color: $accent 
-				transform: scale(1)
+	@extend .owl-dots
 
 
+/* партнеры */
+.partners
+	@extend .bgi
+	padding: 5% 0
+	text-align: center
+	&::before
+		@include before(rgba(#fff, .9))
+	
+	.partners__head
+		font-size: 32px
+		color: $accent
+		text-transform: uppercase
+		font-family: "RalewayBold", sans-serif
+		margin-top: 0
+		margin-bottom: 42px
 
+	.owl-partners
+		.owl-partners__item
+			display: flex
+			margin: auto
+			height: 100%
+			img
+				max-width: 100%
+				width: auto
+				display: inline-block
+				margin: auto
 
+	@extend .owl-dots
+	.owl-dot
+		background-color: #000
 
+	.partners__next, .partners__prev
+		position: absolute
+		top: 0px
+		display: inline-block
+		font-size: 36px
+		width: 50px
+		height: 50px
+		line-height: 50px
+		color: rgba($dark, .5)
+		cursor: pointer
+		border-radius: 50%
+		z-index: 2
+		transition: color, background-color, 0.3s ease
+		&:hover
+			color: rgba($dark, .8)
+			background-color: #f5f5f5
+	.partners__next
+		left: -50px
+	.partners__prev
+		right: -50px
 
 
 
