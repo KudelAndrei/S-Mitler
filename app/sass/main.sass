@@ -49,6 +49,34 @@ ul, li
 	background-repeat: no-repeat
 	position: relative
 
+/* на верх */
+.top
+	position: fixed
+	bottom: 30px
+	right: 30px
+	background-color: rgba(#fff, .3)
+	color: $dark
+	width: 50px
+	height: 50px
+	line-height: 50px
+	border-radius: 50%
+	z-index: 100
+	text-align: center
+	font-size: 26px
+	cursor: pointer
+	transform: translateX(100px)
+	transition: background-color, transform, 0.3s ease
+	&:hover
+		background-color: rgba($accent, .7)
+	&:focus
+		color: $dark
+	&:active
+		background-color: darken($accent, 5%)
+	&.active
+		transform: translateX(0)
+
+
+
 
 /* затемнение  */
 @mixin before($color)

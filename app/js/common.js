@@ -117,5 +117,25 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+	// плавный скролл
+	$(".top").click(function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+		top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1000);
+	});
+
+
+	$(window).scroll(function(){
+		var wScroll = $(window).scrollTop(),
+				hWindow = $(window).height();
+
+		if (wScroll > hWindow) {
+			$('.top').addClass('active');
+		} else {
+			$('.top').removeClass('active');
+		}
+	});
 	
 });
