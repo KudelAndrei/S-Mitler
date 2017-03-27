@@ -708,8 +708,7 @@ ul, li
 				font-size: 22px
 				margin-top: 15px
 				display: inline-block
-				white-space: nowrap
-	
+				white-space: nowrap	
 
 #map
 	width: 100%
@@ -721,6 +720,58 @@ ul, li
 	font-size: 14px
 	margin-bottom: 15px
 	display: block
+
+
+
+/* стили для других страниц */
+.nohome
+	.hamburger 
+		padding: 0
+	.header
+		height: 100%
+		min-height: 200px
+		&::before
+			@include before(rgba(#3d3c3c, .9))
+	.header-top
+		padding: 0
+		background-color: #111
+		.logo
+			padding: 18px 0
+			margin: 0
+	.menu-header
+		li 
+			float: left
+			.menu-header__item
+				padding: 20px 20px
+				display: block
+				color: #979797
+				text-decoration: underline
+				font-size: 14px
+				transition: background-color, color, 0.2s ease
+				.fa
+					margin-right: 5px
+				&.active
+					background-color: #323232
+					color: $accent
+				&:hover
+					background-color: #323232
+					color: $accent
+	.phone
+		padding-top: 20px
+		font-size: 20px
+		display: inline-block
+		text-align: right
+
+	.head
+		font-size: 34px
+		text-transform: uppercase
+		color: #fff
+		z-index: 10
+		text-align: center
+		margin-top: 90px
+		font-family: "RalewayBold", sans-serif
+
+
 
 
 @import "media" // Всегда в конце
