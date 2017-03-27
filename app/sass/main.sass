@@ -394,6 +394,8 @@ ul, li
 		font-size: 28px
 		font-family: "RalewayBold", sans-serif
 		text-transform: uppercase
+		span 
+			color: $accent
 	.salon__desc
 		line-height: 1.6
 
@@ -559,6 +561,78 @@ ul, li
 		left: -50px
 	.partners__prev
 		right: -50px
+
+
+/* блог */
+.blog
+	@extend .bgi
+	padding: 5% 20px
+	text-align: center
+	color: #fff
+	&::before
+		@include before(rgba(#3d3c3c, .9))
+	
+	.blog__logo
+		width: 120px
+		display: inline-block
+		img
+			max-width: 100%
+	.blog__head
+		font-size: 32px
+		text-transform: uppercase
+		font-family: "RalewayBold", sans-serif
+		margin: 0 0 40px
+		span
+			color: $accent
+
+	.owl-blog__item
+		background-color: #2b2b2b
+		transition: background-color 0.3s ease
+		&:hover
+			background-color: lighten(#2b2b2b, 2%)
+			.owl-blog__img
+				img 
+					transform: scale(1.05)
+				&::before
+					background-color: rgba($dark, 0.2)
+	.owl-blog__img
+		position: relative
+		overflow: hidden
+		display: block
+		img
+			max-width: 100%
+			transition: transform 0.5s ease
+		&::before
+			@include before(rgba($dark, 0))
+			transition: background-color 0.3s ease-in-out
+			z-index: 1
+	.owl-blog__date
+		position: absolute
+		background-color: $accent
+		display: inline-block
+		font-family: "FiraSansRegular", sans-serif
+		color: #fff
+		padding: 10px
+		right: 0
+		top: 0
+		z-index: 1
+	.owl-blog__content
+		padding: 20px 20px 40px
+	.owl-blog__head
+		margin-top: 10px
+		font-size: 20px
+		margin-bottom: 5px
+		line-height: 1.5
+		display: inline-block
+	.owl-blog__desc	
+		color: #b1b1b1
+		line-height: 1.6
+	.button
+		color: $dark
+		background-color: #fff
+		padding: 10px 30px
+		display: inline-block
+
 
 
 

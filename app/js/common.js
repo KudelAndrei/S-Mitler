@@ -93,5 +93,29 @@ $(document).ready(function() {
 	$('.partners__prev').click(function() {
 			owl2.trigger('prev.owl.carousel');
 	})
+
+	/* карусель блога */
+	$('.owl-blog').owlCarousel({
+		items: 4,
+		margin: 10,
+		dots: true,
+		responsive : {
+			0 : {
+				items: 1,
+			},
+			580 : {
+				items: 2,
+			},
+			800: {
+				items: 3,
+			},
+			1250: {
+				items: 4,
+			},
+			1920: {
+				items: 5
+			}
+		}
+	});
 	
 });
