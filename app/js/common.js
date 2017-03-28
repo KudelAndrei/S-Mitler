@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+	$(window).on('load', function() {
+    $('.loader').fadeOut('slow', function() {});
+  });
+
 	/* меню */
 	$("#my-menu").mmenu({
 		extensions: ['effect-menu-slide', 'pagedim-black'],
