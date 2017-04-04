@@ -39,6 +39,7 @@ $(document).ready(function() {
 		items: 3,
 		dots: false,
 		nav: false,
+		smartSpeed: 600,
 		responsive : {
 			0 : {
 				items: 1,
@@ -74,6 +75,7 @@ $(document).ready(function() {
 		items: 4,
 		nav: false,
 		dots: true,
+		smartSpeed: 600,
 		responsive : {
 			0 : {
 				items: 1,
@@ -105,6 +107,7 @@ $(document).ready(function() {
 	$('.owl-blog').owlCarousel({
 		items: 4,
 		margin: 10,
+		smartSpeed: 800,
 		dots: true,
 		responsive : {
 			0 : {
