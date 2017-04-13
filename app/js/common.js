@@ -68,6 +68,7 @@ $(document).ready(function() {
 	$('.owl-reviews').owlCarousel({
 		items: 1,
 		dots: true,
+		smartSpeed: 500,
 	});
 
 	/* карусель клиентов */
@@ -86,11 +87,8 @@ $(document).ready(function() {
 			800: {
 				items: 3,
 			},
-			1250: {
-				items: 4,
-			},
 			1920: {
-				items: 6
+				items: 4,
 			}
 		}
 	});
